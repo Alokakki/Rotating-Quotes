@@ -15,11 +15,6 @@ let quotes = ["Sideways chart? 🧘‍♂️ HODL",
 "LFG! 🚀 *Stack bags tonight",  
 "Therapist: “Problem?” 🔐 “Ledger.”",  
 "Bear market? 🛒 Discount season",  
-"The only way to do great work is to love what you do. – Steve Jobs",
-    "Innovation distinguishes between a leader and a follower. – Steve Jobs",
-    "Your time is limited, so don't waste it living someone else's life. – Steve Jobs",
-    "Stay hungry, stay foolish. – Steve Jobs",
-    "The people who are crazy enough to think they can change the world are the ones who do. – Steve Jobs"
 ];
 
 const quoteDisplay = document.getElementById('quoteDisplay');
