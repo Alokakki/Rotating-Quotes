@@ -1,3 +1,7 @@
+:root {
+  --primary: #f5a091;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -109,7 +113,7 @@ h1 {
     left: 0;
     animation: progress 59s linear infinite;
 }
-
+/* 
 .copy-button {
     background: #64ffda;
     color: #0a192f;
@@ -146,13 +150,64 @@ h1 {
 
 .copy-icon {
     fill: #0a192f;
+} */
+
+
+
+.copied {
+  display: flex;
+  padding: 1.1rem 2.5rem 1.1rem 3.5rem;
+  border-radius: 99rem;
+  background-color: var(--primary);
+  transition: all 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: none;
+
+  font-size: 18px;
 }
 
-@keyframes progress {
+.copied .icon {
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copied .icon span {
+  background: black;
+  border-radius: 100%;
+  padding: 0rem;
+
+  width: 0rem;
+  height: 0rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(-180deg);
+
+  transition: all 0.5s ease;
+}
+
+.copied:hover .icon span {
+  transform: rotate(0deg);
+
+  border-radius: 100%;
+  padding: 0.6rem;
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+
+/* @keyframes progress {
     0% { width: 100% }
     100% { width: 0 }
 }
-
+ */
 @media (max-width: 768px) {
     .quote-text {
         font-size: 1.2em;
