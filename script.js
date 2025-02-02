@@ -103,8 +103,6 @@ let quotes = [
 
 const quoteDisplay = document.getElementById('quoteDisplay');
 const copyButton = document.getElementById('copyButton');
-const quotesInput = document.getElementById('quotesInput');
-const updateButton = document.getElementById('updateQuotes');
 let currentIndex = 0;
 let intervalId;
 
@@ -142,41 +140,12 @@ function copyQuote() {
     });
 }
 
-function updateQuotes() {
-    const newQuotes = quotesInput.value.split(',').map(quote => quote.trim()).filter(quote => quote !== '');
-    
-    if (newQuotes.length > 0) {
-        quotes = newQuotes;
-        currentIndex = 0;
-        quoteDisplay.textContent = quotes[currentIndex];
-        
-        // Reset the interval
-        clearInterval(intervalId);
-        intervalId = setInterval(displayNextQuote, 59000);
-        
-        // Reset the progress bar animation
-        const progressBar = document.querySelector('.progress-bar');
-        progressBar.style.animation = 'none';
-        void progressBar.offsetWidth;
-        progressBar.style.animation = 'progress 59s linear infinite';
-        
-        // Clear the input
-        quotesInput.value = '';
-    }
-}
-
 // Initial display
 quoteDisplay.textContent = quotes[currentIndex];
-intervalId = setInterval(displayNextQuote, 10000);
+intervalId = setInterval(displayNextQuote, 12000);
 
 // Event listeners
 copyButton.addEventListener('click', copyQuote);
-updateButton.addEventListener('click', updateQuotes);
-quotesInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        updateQuotes();
-    }
-});
 
 // Reset animation on window focus
 window.addEventListener('focus', () => {
