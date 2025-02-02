@@ -5,43 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotating Quotes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Clipboard</h1>
-        <div class="input-section">
-            <input type="text" id="quotesInput" class="quotes-input" placeholder="Enter text separated by commas (e.g. Text 1, Text 2, Text 3)">
-            <button id="updateQuotes" class="update-button">
-                <svg class="update-icon" viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
-                </svg>
-                Update
-            </button>
-        </div>
         <div class="quote-box">
             <div class="quote-text" id="quoteDisplay"></div>
             <div class="progress-bar"></div>
         </div>
-<!--         <button id="copyButton" class="copy-button">
+        <button id="copyButton" class="copy-button">
             <svg class="copy-icon" viewBox="0 0 24 24" width="24" height="24">
                 <path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
             </svg>
             Copy
-        </button> -->
-
-       <button class ="copied">
-  Get to work
-
-  <div class="icon">
-    <span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-        <path d="M1.05403 31.6175C0.271626 32.3972 0.271626 33.6614 1.05403 34.441C1.83644 35.2207 3.10497 35.2207 3.88737 34.441L1.05403 31.6175ZM35.5599 2.05152C35.5599 0.948871 34.6629 0.0549994 33.5564 0.0549994L15.5251 0.0549994C14.4187 0.0549994 13.5217 0.948871 13.5217 2.05152C13.5217 3.15416 14.4187 4.04804 15.5251 4.04804H31.5529V20.0202C31.5529 21.1228 32.4499 22.0167 33.5564 22.0167C34.6629 22.0167 35.5599 21.1228 35.5599 20.0202L35.5599 2.05152ZM3.88737 34.441L34.9731 3.46327L32.1397 0.639766L1.05403 31.6175L3.88737 34.441Z" fill="#F5A091" />
-      </svg>
-    </span>
-  </div>
-</button>
-        
+        </button>
     </div>
 
     <script src="script.js"></script>
